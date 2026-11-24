@@ -5,9 +5,9 @@ services:
     image: pgvector/pgvector:pg16
     container_name: careermatch-db
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgrespassword
-      POSTGRES_DB: careermatch
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgrespassword}
+      POSTGRES_DB: ${POSTGRES_DB:-careermatch}
     ports:
       - "5432:5432"
     volumes:
@@ -24,8 +24,8 @@ services:
       dockerfile: Dockerfile
     container_name: careermatch-backend
     environment:
-      DATABASE_URL: postgresql+psycopg2://postgres:postgrespassword@db:5432/careermatch
-      SECRET_KEY: careermatch-production-secret-key-32-chars-long
+      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgrespassword}@db:5432/${POSTGRES_DB:-careermatch}
+      SECRET_KEY: ${SECRET_KEY:-your-dev-secret-key-change-in-production-32bytes}
       DEBUG: "False"
       CORS_ORIGINS: '["http://localhost:3000", "http://localhost:5173"]'
     ports:

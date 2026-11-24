@@ -39,7 +39,7 @@ This spins up:
 ## Environment Variables
 See `.env.example` in the project root for configuration options:
 - `DATABASE_URL`: PostgreSQL connection string (defaults to SQLite fallback if Postgres is absent)
-- `JWT_SECRET_KEY`: Secret string for token signing
+- `SECRET_KEY`: Secret string for token signing
 - `EMBEDDING_MODEL_NAME`: HuggingFace embedding model (`all-MiniLM-L6-v2`)
 - `GEMINI_API_KEY`: Optional Google Gemini API key for external LLM generation
 - `OPENAI_API_KEY`: Optional OpenAI API key

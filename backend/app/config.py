@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     APP_ENV: str = "development"
     DEBUG: bool = True
     API_V1_PREFIX: str = "/api/v1"
-    SECRET_KEY: str = "careermatch-ai-super-secret-development-key-32bytes-min"
+    SECRET_KEY: str = "dev-insecure-secret-key-change-in-production-32b"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440  # 24 hours
 

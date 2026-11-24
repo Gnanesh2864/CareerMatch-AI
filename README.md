@@ -51,7 +51,7 @@
 
 ## 🛠️ Architecture & Quickstart
 
-See [ARCHITECTURE.md](file:///Users/gnanesh/.gemini/antigravity/scratch/careermatch-ai/ARCHITECTURE.md) for deep technical design and [DEVELOPMENT.md](file:///Users/gnanesh/.gemini/antigravity/scratch/careermatch-ai/DEVELOPMENT.md) for local run instructions.
+See [ARCHITECTURE.md](ARCHITECTURE.md) for deep technical design and [DEVELOPMENT.md](DEVELOPMENT.md) for local run instructions.
 
 ```bash
 # Run backend
